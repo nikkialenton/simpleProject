@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <title>Movie List</title>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.js"></script>
+        <script src="javascripts/app.js" type="text/javascript"></script> <!-- not created yet -->
+    </head>
+    <body >
+    <h1> POPULAR MOVIES OF 2016 </h1>
+   Search by Movie Title: <input type="text" ng-model="search.movieTitle">
+
+        <div ng-controller="myController">
+        	<ul ng-repeat="item in data | filter:search">
+				<li>Movie Title: {{item.movieTitle}} ;  Score: {{item.stars}}</li>
+			</ul>
+        </div>
+    </body>
+</html>
